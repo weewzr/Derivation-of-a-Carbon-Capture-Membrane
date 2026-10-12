@@ -1,3 +1,5 @@
+> **Review 01 reconciliation:** The earlier informal monotonicity proof in section 3 is **superseded** by the explicit derivative and bracket-sign proof in [06_REVIEW01_CROSSFLOW_CLOSURE_REMEDIATION.md](06_REVIEW01_CROSSFLOW_CLOSURE_REMEDIATION.md). Polynomial coefficients should be called c2, c1 and c0; the symbol a is reserved for dimensionless area. The benchmark identities below remain candidate analytical references, not executed numerical evidence.
+
 # 03 - Binary Cross-Flow Closure Audit and Analytical Benchmarks
 
 ## Status
