@@ -1,34 +1,36 @@
 # STATUS
 
 ## Current state
-Repository initialized for a first-principles, implementation-independent CO2 membrane pretreatment model. The mathematical plan, boundary-condition contract, derivation ledger, literature register, economic metrics and MATLAB handoff specification exist.
+The membrane repository now explicitly follows a staged derivation workflow adapted from the TRISO mathematical project. A candidate transport derivation and generic binary cross-flow model exist, but both remain subject to the mathematical gate and independent review process.
 
 ## Current gate
-G0-G1: recover actual CN4119 specifications and complete the evidence/property basis.
+Gate A / early Gate B: physical problem definition and candidate continuous derivation.
 
-## Canonical files
-- `PROJECT_BRIEF.md`
-- `RESEARCH_FRAMING.md`
-- `docs/MATHEMATICAL_DERIVATION_PLAN.md`
-- `docs/INITIAL_CONDITIONS_AND_BOUNDARIES.md`
+## Workflow authority
+- `docs/DERIVATION_WORKFLOW_TRISO_STYLE.md`
+- `docs/GATE_WORKFLOW.md`
+- `docs/CANONICAL_EQUATION_REGISTER.md`
 - `docs/DERIVATION_LEDGER.md`
+
+## Current mathematical documents
+- `docs/01_FIRST_PRINCIPLES_TRANSPORT_DERIVATION.md`
+- `docs/02_GENERIC_BINARY_CROSSFLOW_MODEL.md`
+- `docs/INITIAL_CONDITIONS_AND_BOUNDARIES.md`
+- `docs/MATHEMATICAL_DERIVATION_PLAN.md`
 - `docs/MATLAB_HANDOFF_SPECIFICATION.md`
-- `docs/ECONOMIC_METRICS.md`
-- `docs/LITERATURE_FINDINGS_2026-10.md`
-- `literature/LITERATURE_AND_PARAMETER_REGISTER.md`
 
 ## Current scientific position
-A dense-polymer solution-diffusion membrane is the candidate starting model, conditional on confirming membrane type and operating conditions. The commonly used partial-pressure flux law is valid only under stated constitutive and gas-phase assumptions. It is not yet a final project equation set because the module flow arrangement and boundary conditions must be selected.
+The dense-polymer solution-diffusion law and idealised binary cross-flow closure are candidates under explicit assumptions; they are not yet promoted to a final project-specific verified model. The local permeate closure in cross-flow must be reviewed against the exact geometric interpretation before relying on it numerically.
 
 ## Open blockers
-- Actual CN4119 feed composition, flow, temperature, pressure and wet/dry basis.
-- Membrane material/class and selective-layer/module architecture.
-- Membrane permeance/selectivity data measured under sufficiently relevant conditions.
-- Module arrangement and permeate-side boundary closure.
-- Downstream HYSYS capture performance interface and economic comparison boundary.
+- Confirm module architecture/flow arrangement and permeate-side physical closure.
+- Independently audit the generic binary equations, especially the algebraic local permeate-composition equation and admissible-flux domain.
+- Receive actual CN4119 feed conditions and membrane-property evidence.
+- Complete an analytical limiting benchmark.
+- Verify the mathematical equation register against the canonical derivation documents.
 
-## Next action
-Upload source specifications to `attachments/`. Then inventory the inputs, verify literature data from primary sources, choose a matched benchmark, and finish the equation derivation before writing implementation code.
+## Next bounded action
+Perform a derivation audit of the generic binary cross-flow model and close any mathematical errors before extending the equations.
 
 ## Stop condition
-Do not optimise or claim a preferred design until the feed basis, membrane class, module equations and baseline are frozen and verified.
+Do not proceed to MATLAB/DWSIM implementation, parameter optimisation, or project economics until the continuous mathematical model is closed and the relevant limiting checks pass.
