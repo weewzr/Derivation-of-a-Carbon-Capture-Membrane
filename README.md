@@ -27,6 +27,10 @@ First target: steady-state, isothermal, 1-D dense polymeric solution-diffusion m
 
 Do not start with CFD. Do not treat a component-split block as a physical membrane model. Do not optimize before the model, literature inputs and baseline are defined.
 
+## Derivation workflow
+
+The derivation follows `docs/DERIVATION_WORKFLOW_TRISO_STYLE.md`, adapted from the TRISO project's verified-first-principles workflow. The canonical equation register is `docs/CANONICAL_EQUATION_REGISTER.md`; phase/gate exits are controlled by `docs/GATE_WORKFLOW.md`. Preserve raw evidence, derive continuously, assign stable equation IDs, verify limiting cases, conduct independent review, then freeze the MATLAB handoff.
+
 ## Main files
 
 - `PROJECT_BRIEF.md` - project charter
