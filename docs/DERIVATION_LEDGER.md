@@ -1,29 +1,27 @@
 # First-Principles Derivation Ledger
 
-Use this file to record each derivation step and its status. It is not a place to mark equations complete merely because they look familiar.
+This ledger tracks *main-research derivation status*, not independent-review closure. The original independent Review 01 remains FAIL pending re-review.
 
-| ID | Result to derive | Starting principle | Assumptions needed | Independent check | Status |
+| ID | Mathematical object | Canonical evidence | Assumption / dependency | Main research status | Independent status |
 |---|---|---|---|---|---|
-| DER-001 | Chemical-potential driving force | Thermodynamics | State equation/fugacity choice | Units and equilibrium limit | PLANNED |
-| DER-002 | Sorption at membrane surfaces | Constitutive/interface relation | Linear or chosen sorption model | Interface limit | PLANNED |
-| DER-003 | Diffusive transport through selective layer | Fick/chemical-potential transport | Homogeneous layer, steady or specified transient | Dimensions and sign | PLANNED |
-| DER-004 | Permeability = diffusivity x solubility | Solution-diffusion constitutive model | Linear sorption and constant properties | Unit consistency | PLANNED |
-| DER-005 | Partial-pressure flux law | Previous steps | Ideal gas/linear permeability and stated thickness | Zero driving force | PLANNED |
-| DER-006 | Feed-side differential component balance | Conservation of species | Steady module; sign/area convention | Integrated mass balance | PLANNED |
-| DER-007 | Total flow and composition equations | Definitions (F=\sum_iF_i, x_i=F_i/F) | Defined stream path | Mole fractions sum to one | PLANNED |
-| DER-008 | Permeate closure for selected module arrangement | Component conservation | Chosen flow arrangement | Whole-module species balance | PLANNED |
-| DER-009 | Recovery, purity, enrichment, stage cut | Definitions | Explicit reference streams | Bounds and consistency | PLANNED |
-| DER-010 | Area sizing/design equation | Flux + balances | Target/known design variable | Analytical limiting case | PLANNED |
+| DER-001 | Chemical-potential driving force | docs/07 | isothermal chemical potentials, mobility law | DERIVED CONDITIONALLY | RE-REVIEW PENDING |
+| DER-002 | Membrane-interface sorption | docs/01, docs/07 | local equilibrium, Henry-linear sorption | DERIVED CONDITIONALLY | RE-REVIEW PENDING |
+| DER-003 | Through-layer diffusion | docs/01, docs/07 | steady, homogeneous constant D | DERIVED CONDITIONALLY | REVIEW 01 ACCEPTED ALGEBRA |
+| DER-004 | Permeability and permeance | docs/01 | P=DS, Pi=P/ell | DERIVED CONDITIONALLY | REVIEW 01 ACCEPTED ALGEBRA |
+| DER-005 | Gas partial-pressure flux law | docs/01, docs/07 | ideal gas and linear sorption | DERIVED CONDITIONALLY | RE-REVIEW PENDING |
+| DER-006 | Retentate component balances | docs/02 | steady local area control volume | DERIVED | REVIEW 01 ACCEPTED ALGEBRA |
+| DER-007 | Total-flow/composition identities | docs/02, docs/05 | F>0 | DERIVED | REVIEW 01 ACCEPTED ALGEBRA |
+| DER-008 | Local permeate collector closure | docs/06 | ideal local withdrawal, no axial permeate mixing | DERIVED FOR IDEALISED GEOMETRY | BLOCKER RE-REVIEW PENDING |
+| DER-009 | Purity, recovery, enrichment, stage cut | docs/02, docs/05 | nonzero denominator where required | DERIVED | REVIEW 01 ACCEPTED DEFINITIONS |
+| DER-010 | Area scaling and sizing | docs/04, docs/05 | fixed pressure, constant permeance | DERIVED CONDITIONALLY | REVIEW 01 ACCEPTED SCALING |
+| DER-011 | Local admissible root and uniqueness | docs/06 | 0<x<1, 0<=r<1, alpha>0 | REVISED PROOF | MAJOR RE-REVIEW PENDING |
+| DER-012 | Analytical limiting cases | docs/03, verification/REVIEW01_NUMERICAL_ACCEPTANCE_CONTRACT.md | r=0 or alpha=1 | DERIVED, TESTS NOT EXECUTED | REVIEW 01 ACCEPTED IDENTITIES |
+| DER-013 | Solver stopping and target recovery | verification/REVIEW01_NUMERICAL_ACCEPTANCE_CONTRACT.md | chosen numerical tolerances/area cap | SPECIFIED, NOT EXECUTED | MAJOR RE-REVIEW PENDING |
+| DER-014 | Numerical convergence | verification/REVIEW01_NUMERICAL_ACCEPTANCE_CONTRACT.md | solver implementation needed | PLANNED | NOT TESTED |
+| DER-015 | Literature-calibrated model | literature/LITERATURE_AND_PARAMETER_REGISTER.md | actual CN4119 data/material | OPEN | NOT REVIEWED |
 
-## Required derivation format
+## Equation documentation rule
+For each consequential equation state physical purpose, starting principle, algebra, symbols/SI units, assumptions, dimensional and limiting checks, and review status.
 
-For every equation:
-1. physical purpose;
-2. starting principle;
-3. algebraic derivation;
-4. symbols and SI units;
-5. assumptions/domain;
-6. numerical inputs/provenance if evaluated;
-7. dimensional check;
-8. limiting-case check;
-9. status and independent review.
+## Source-of-truth precedence
+The consolidated correction contract (docs/06 and docs/07 plus verification/REVIEW01_NUMERICAL_ACCEPTANCE_CONTRACT.md) takes precedence over superseded proof/solver wording in docs/01-05 until those documents are revised. This does not mean independent acceptance.
