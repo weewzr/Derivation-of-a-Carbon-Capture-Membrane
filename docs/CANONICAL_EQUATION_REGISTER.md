@@ -24,3 +24,24 @@ This is the single authoritative equation ID register for the membrane derivatio
 4. "Verified" names the exact scope/benchmark; it never means all possible membranes or operating conditions.
 5. External source equations should have a citation and must be distinguished from equations derived in this project.
 6. Add each new equation when it is created, not retrospectively at manuscript time.
+
+## Review 01 reconciliation additions (candidate, not independently verified)
+
+| ID | Description | Source | Class | Status |
+|---|---|---|---|---|
+| MEM-SOL-001 | Retentate CO2 composition | docs/05 | DEFINITION | CANDIDATE |
+| MEM-SOL-002 | Dimensionless CO2 driving force | docs/05 | DEFINITION | CANDIDATE |
+| MEM-SOL-003 | Dimensionless N2 driving force | docs/05 | DEFINITION | CANDIDATE |
+| MEM-SOL-004 | Local permeate composition closure | docs/05 and docs/06 | IDEALISED COLLECTOR BALANCE | REVIEW PENDING |
+| MEM-SOL-005 | Dimensionless CO2 retentate ODE | docs/05 | CONSERVATION + CONSTITUTIVE | REVIEW PENDING |
+| MEM-SOL-006 | Dimensionless N2 retentate ODE | docs/05 | CONSERVATION + CONSTITUTIVE | REVIEW PENDING |
+| MEM-SOL-007 | Feed-inlet initial conditions | docs/05 | DESIGN/INPUT | CANDIDATE |
+| MEM-SOL-008 | Canonical closure residual H | docs/05 and docs/06 | DERIVED | REVIEW PENDING |
+| MEM-SOL-009 | Admissible root interval | docs/05 and docs/06 | DERIVED UNDER ONE-WAY FLUX | REVIEW PENDING |
+| MEM-SOL-010 | Stage cut | docs/05 | DEFINITION | CANDIDATE |
+| MEM-SOL-011 | CO2 recovery | docs/05 | DEFINITION | CANDIDATE |
+| MEM-SOL-012 | Collected permeate CO2 fraction | docs/05 | DEFINITION | CANDIDATE |
+| MEM-SOL-013 | Retentate CO2 fraction | docs/05 | DEFINITION | CANDIDATE |
+| MEM-SOL-014 | Physical area recovery | docs/05 | DIMENSIONAL IDENTITY | CANDIDATE |
+
+The main-research corrections in docs/06, docs/07 and verification/REVIEW01_NUMERICAL_ACCEPTANCE_CONTRACT.md remain subject to independent review. Earlier VERIFIED labels in the pre-review register should not be interpreted as Review 01 closure.
