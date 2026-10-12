@@ -25,23 +25,23 @@ This is the single authoritative equation ID register for the membrane derivatio
 5. External source equations should have a citation and must be distinguished from equations derived in this project.
 6. Add each new equation when it is created, not retrospectively at manuscript time.
 
-## Review 01 reconciliation additions (candidate, not independently verified)
+## MEM-SOL register (re-review 01 completion)
 
-| ID | Description | Source | Class | Status |
-|---|---|---|---|---|
-| MEM-SOL-001 | Retentate CO2 composition | docs/05 | DEFINITION | CANDIDATE |
-| MEM-SOL-002 | Dimensionless CO2 driving force | docs/05 | DEFINITION | CANDIDATE |
-| MEM-SOL-003 | Dimensionless N2 driving force | docs/05 | DEFINITION | CANDIDATE |
-| MEM-SOL-004 | Local permeate composition closure | docs/05 and docs/06 | IDEALISED COLLECTOR BALANCE | REVIEW PENDING |
-| MEM-SOL-005 | Dimensionless CO2 retentate ODE | docs/05 | CONSERVATION + CONSTITUTIVE | REVIEW PENDING |
-| MEM-SOL-006 | Dimensionless N2 retentate ODE | docs/05 | CONSERVATION + CONSTITUTIVE | REVIEW PENDING |
-| MEM-SOL-007 | Feed-inlet initial conditions | docs/05 | DESIGN/INPUT | CANDIDATE |
-| MEM-SOL-008 | Canonical closure residual H | docs/05 and docs/06 | DERIVED | REVIEW PENDING |
-| MEM-SOL-009 | Admissible root interval | docs/05 and docs/06 | DERIVED UNDER ONE-WAY FLUX | REVIEW PENDING |
-| MEM-SOL-010 | Stage cut | docs/05 | DEFINITION | CANDIDATE |
-| MEM-SOL-011 | CO2 recovery | docs/05 | DEFINITION | CANDIDATE |
-| MEM-SOL-012 | Collected permeate CO2 fraction | docs/05 | DEFINITION | CANDIDATE |
-| MEM-SOL-013 | Retentate CO2 fraction | docs/05 | DEFINITION | CANDIDATE |
-| MEM-SOL-014 | Physical area recovery | docs/05 | DIMENSIONAL IDENTITY | CANDIDATE |
+| ID | Description | Source docs | Class | Assumptions/domain | Units | Check evidence | Status | Downstream dependency |
+|---|---|---|---|---|---|---|---|---|
+| MEM-SOL-001 | Retentate CO2 composition | docs/05 | definition | f_C+f_N>0 | 1 | ratio identity | Independently checked symbolically for restricted model; numerical execution pending | feeds closure |
+| MEM-SOL-002 | Dimensionless CO2 driving force | docs/05 | definition | ideal gas; fixed r; 0<=y<=1 | 1 | flux law substitution | Independently checked symbolically for restricted model; numerical execution pending | CO2 ODE |
+| MEM-SOL-003 | Dimensionless N2 driving force | docs/05 | definition | ideal gas; fixed r; 0<=y<=1 | 1 | flux law substitution | Independently checked symbolically for restricted model; numerical execution pending | N2 ODE |
+| MEM-SOL-004 | Local permeate composition | docs/06 | ideal collector balance | no axial mixing/sweep/hold-up; positive total flux | 1 | local component control-volume; re-review 01 | Independently checked symbolically for restricted model; numerical execution pending | closure root |
+| MEM-SOL-005 | Dimensionless CO2 ODE | docs/05 | conservation plus constitutive | steady feed; fixed Pi_C,P_f; f>0 | 1 | area rescaling; re-review 01 | Independently checked symbolically for restricted model; numerical execution pending | solver |
+| MEM-SOL-006 | Dimensionless N2 ODE | docs/05 | conservation plus constitutive | steady feed; fixed Pi_N,P_f; f>0 | 1 | area rescaling; re-review 01 | Independently checked symbolically for restricted model; numerical execution pending | solver |
+| MEM-SOL-007 | Inlet state | docs/05 | boundary/input | 0<z<1; F0>0 | 1 | normalization identity | Independently checked symbolically for restricted model; numerical execution pending | IVP |
+| MEM-SOL-008 | Canonical closure residual H | docs/06 | derived | 0<x<1; 0<=r<1; alpha>0 | 1 | bracket signs and derivative; re-review 01 | Independently checked symbolically for restricted model; numerical execution pending | root solver |
+| MEM-SOL-009 | Admissible root interval | docs/06 | derived | 0<r<1; nonnegative component fluxes | 1 | q_C>=0,q_N>=0; re-review 01 | Independently checked symbolically for restricted model; numerical execution pending | root solver |
+| MEM-SOL-010 | Stage cut | docs/05 | definition | normalized feed F0>0 | 1 | overall flow balance | Independently checked symbolically for restricted model; numerical execution pending | output |
+| MEM-SOL-011 | CO2 recovery | docs/05 | definition | z>0 | 1 | component balance | Independently checked symbolically for restricted model; numerical execution pending | output |
+| MEM-SOL-012 | Collected permeate CO2 fraction | docs/05 | definition | theta>0 | 1 | component balance | Independently checked symbolically for restricted model; numerical execution pending | output |
+| MEM-SOL-013 | Retentate CO2 fraction | docs/05 | definition | f_C+f_N>0 | 1 | mole-fraction identity | Independently checked symbolically for restricted model; numerical execution pending | output |
+| MEM-SOL-014 | Physical area conversion | docs/04/05 | dimensional identity | Pi_C>0; P_f>0; F0>0 | m2 | unit check and scaling; re-review 01 | Independently checked symbolically for restricted model; numerical execution pending | sizing |
 
-The main-research corrections in docs/06, docs/07 and verification/REVIEW01_NUMERICAL_ACCEPTANCE_CONTRACT.md remain subject to independent review. Earlier VERIFIED labels in the pre-review register should not be interpreted as Review 01 closure.
+This register reflects independent re-review 01's **restricted** mathematical acceptance only. It does not claim executed MATLAB/DWSIM verification, empirical validation, or suitability of a commercial module. Original review reports remain immutable.
