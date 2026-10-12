@@ -1,29 +1,34 @@
 # STATUS
 
 ## Current state
-Repository framework and initial derivation route established. No verified project-specific membrane calculation has yet been accepted.
+Repository initialized for a first-principles, implementation-independent membrane model. Mathematical contract and MATLAB handoff documents are in place. Initial membrane-transport and DWSIM implementation sources have been recorded.
 
 ## Current gate
-G0-G1: recover specifications and construct evidence/property register.
+G0-G1: recover actual CN4119 specifications and complete the literature/property register.
 
 ## Canonical current files
 - `PROJECT_BRIEF.md`
 - `RESEARCH_FRAMING.md`
 - `docs/MATHEMATICAL_DERIVATION_PLAN.md`
+- `docs/DERIVATION_LEDGER.md`
+- `docs/INITIAL_CONDITIONS_AND_BOUNDARIES.md`
 - `docs/MATLAB_HANDOFF_SPECIFICATION.md`
+- `docs/ECONOMIC_METRICS.md`
 - `literature/LITERATURE_AND_PARAMETER_REGISTER.md`
+- `docs/LITERATURE_FINDINGS_2026-10.md`
 
-## Known key constraint
-The 1-D model's equations depend on membrane class and module flow arrangement. Do not finalize a unique differential system until these are selected.
+## Current scientific position
+A dense-polymer solution-diffusion membrane is the candidate starting model, conditional on confirming material type and realistic operating conditions. The idealised partial-pressure flux relation is literature-standard under stated assumptions, but the module configuration and property basis are not yet frozen.
 
 ## Open blockers
-- Current CN4119 specifications are not yet available in the repository.
-- Membrane class/property data not yet selected.
-- Exact flue gas basis, flow, pressure and humidity not frozen.
-- Downstream economic comparison boundary not frozen.
+- Actual CN4119 feed composition, flow, temperature, pressure and wet/dry basis.
+- Membrane material/class and selective-layer/module architecture.
+- Membrane permeance/selectivity data with matching test conditions.
+- Module arrangement and permeate-side boundary model.
+- Downstream HYSYS capture performance interface and economic boundary.
 
 ## Next action
-Upload project specifications to `attachments/`; then inventory the inputs and research primary literature before freezing the mathematical benchmark.
+Upload source specifications to `attachments/`. Then produce the parameter register and select a matched membrane benchmark before the complete derivation is promoted to canonical.
 
 ## Stop condition
-Do not begin economic optimisation or claim an optimum before the base model and inputs are signed off.
+No optimisation or final base-case result until the feed, membrane class and module boundary conditions are frozen.
