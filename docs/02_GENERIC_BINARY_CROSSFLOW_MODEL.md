@@ -1,3 +1,5 @@
+> **Review 01 reconciliation:** The local permeate composition is an explicit **ideal local-collector geometry assumption**, derived from a differential permeate collector balance in [06_REVIEW01_CROSSFLOW_CLOSURE_REMEDIATION.md](06_REVIEW01_CROSSFLOW_CLOSURE_REMEDIATION.md). This model does not represent a generic co-/counter-current permeate channel. The revised admissible root and proof in document 06 supersede informal proof wording here. Numerical stopping criteria are in [REVIEW01_NUMERICAL_ACCEPTANCE_CONTRACT.md](../verification/REVIEW01_NUMERICAL_ACCEPTANCE_CONTRACT.md).
+
 # 02 - Generic Binary CO2/N2 Cross-Flow Membrane Model
 
 ## Status
