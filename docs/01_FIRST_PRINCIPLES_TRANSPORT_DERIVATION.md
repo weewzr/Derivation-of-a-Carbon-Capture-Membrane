@@ -1,3 +1,5 @@
+> **Review 01 reconciliation:** This derivation is valid conditionally under Fickian membrane transport and linear sorption. It does not by itself derive the mobility law from conservation. For the separate chemical-potential/constitutive argument and its limitations, see [07_CHEMICAL_POTENTIAL_TRANSPORT_SCOPE.md](07_CHEMICAL_POTENTIAL_TRANSPORT_SCOPE.md). Independent acceptance is pending.
+
 # 01 - First-Principles Membrane Transport Derivation
 
 ## Status
