@@ -1,3 +1,5 @@
+> **Review 01 reconciliation:** This document is a historical candidate specification, **not a frozen implementation handoff**. For the authoritative corrected local-collector architecture and proof see [06_REVIEW01_CROSSFLOW_CLOSURE_REMEDIATION.md](06_REVIEW01_CROSSFLOW_CLOSURE_REMEDIATION.md); for numerical tolerances, events and target search see [REVIEW01_NUMERICAL_ACCEPTANCE_CONTRACT.md](../verification/REVIEW01_NUMERICAL_ACCEPTANCE_CONTRACT.md). The corrections await independent re-review. Do not use this document alone to implement the model.
+
 # 05 - Solver-Ready Continuous Binary Cross-Flow Contract
 
 Status: MAIN RESEARCH CANDIDATE. Independent mathematical review pending. No CN4119 parameter calibration.
