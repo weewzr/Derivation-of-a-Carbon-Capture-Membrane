@@ -4,7 +4,7 @@
 The membrane repository now explicitly follows a staged derivation workflow adapted from the TRISO mathematical project. A candidate transport derivation and generic binary cross-flow model exist, but both remain subject to the mathematical gate and independent review process.
 
 ## Current gate
-Gate A / early Gate B: physical problem definition and candidate continuous derivation.
+Gate B candidate continuous model complete; Gate C analytical checks derived but not independently audited.
 
 ## Workflow authority
 - `docs/DERIVATION_WORKFLOW_TRISO_STYLE.md`
@@ -29,8 +29,11 @@ The dense-polymer solution-diffusion law and idealised binary cross-flow closure
 - Complete an analytical limiting benchmark.
 - Verify the mathematical equation register against the canonical derivation documents.
 
+## New deliverable
+- `docs/05_SOLVER_READY_BINARY_CONTRACT.md`: nondimensional governing equations, admissible local closure, uniqueness argument, solver state/conditions, outputs and verification cases.
+
 ## Next bounded action
-Perform a derivation audit of the generic binary cross-flow model and close any mathematical errors before extending the equations.
+Independent mathematical audit of documents 01-05, then targeted reconciliation and freezing of the MATLAB/DWSIM handoff contract.
 
 ## Stop condition
 Do not proceed to MATLAB/DWSIM implementation, parameter optimisation, or project economics until the continuous mathematical model is closed and the relevant limiting checks pass.
