@@ -1,34 +1,34 @@
 # STATUS
 
 ## Current state
-Repository initialized for a first-principles, implementation-independent membrane model. Mathematical contract and MATLAB handoff documents are in place. Initial membrane-transport and DWSIM implementation sources have been recorded.
+Repository initialized for a first-principles, implementation-independent CO2 membrane pretreatment model. The mathematical plan, boundary-condition contract, derivation ledger, literature register, economic metrics and MATLAB handoff specification exist.
 
 ## Current gate
-G0-G1: recover actual CN4119 specifications and complete the literature/property register.
+G0-G1: recover actual CN4119 specifications and complete the evidence/property basis.
 
-## Canonical current files
+## Canonical files
 - `PROJECT_BRIEF.md`
 - `RESEARCH_FRAMING.md`
 - `docs/MATHEMATICAL_DERIVATION_PLAN.md`
-- `docs/DERIVATION_LEDGER.md`
 - `docs/INITIAL_CONDITIONS_AND_BOUNDARIES.md`
+- `docs/DERIVATION_LEDGER.md`
 - `docs/MATLAB_HANDOFF_SPECIFICATION.md`
 - `docs/ECONOMIC_METRICS.md`
-- `literature/LITERATURE_AND_PARAMETER_REGISTER.md`
 - `docs/LITERATURE_FINDINGS_2026-10.md`
+- `literature/LITERATURE_AND_PARAMETER_REGISTER.md`
 
 ## Current scientific position
-A dense-polymer solution-diffusion membrane is the candidate starting model, conditional on confirming material type and realistic operating conditions. The idealised partial-pressure flux relation is literature-standard under stated assumptions, but the module configuration and property basis are not yet frozen.
+A dense-polymer solution-diffusion membrane is the candidate starting model, conditional on confirming membrane type and operating conditions. The commonly used partial-pressure flux law is valid only under stated constitutive and gas-phase assumptions. It is not yet a final project equation set because the module flow arrangement and boundary conditions must be selected.
 
 ## Open blockers
 - Actual CN4119 feed composition, flow, temperature, pressure and wet/dry basis.
 - Membrane material/class and selective-layer/module architecture.
-- Membrane permeance/selectivity data with matching test conditions.
-- Module arrangement and permeate-side boundary model.
-- Downstream HYSYS capture performance interface and economic boundary.
+- Membrane permeance/selectivity data measured under sufficiently relevant conditions.
+- Module arrangement and permeate-side boundary closure.
+- Downstream HYSYS capture performance interface and economic comparison boundary.
 
 ## Next action
-Upload source specifications to `attachments/`. Then produce the parameter register and select a matched membrane benchmark before the complete derivation is promoted to canonical.
+Upload source specifications to `attachments/`. Then inventory the inputs, verify literature data from primary sources, choose a matched benchmark, and finish the equation derivation before writing implementation code.
 
 ## Stop condition
-No optimisation or final base-case result until the feed, membrane class and module boundary conditions are frozen.
+Do not optimise or claim a preferred design until the feed basis, membrane class, module equations and baseline are frozen and verified.
