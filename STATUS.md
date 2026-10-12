@@ -1,28 +1,31 @@
 # STATUS
 
-## Current gate
-Independent Review 01 main-research reconciliation complete; independent re-review pending. **NOT PASSED FOR IMPLEMENTATION.**
+## Independent mathematical gate
+**ACCEPTABLE ONLY UNDER RESTRICTED ASSUMPTIONS** - independent re-review 01.
 
-## Independent review
-- `reviews/INDEPENDENT_CONTINUOUS_MATHEMATICS_REVIEW_01.md`: FAIL - REMEDIATION REQUIRED; 1 BLOCKER, 5 MAJOR, 3 MODERATE, 2 MINOR, 1 NOTE.
-- `reviews/INDEPENDENT_CONTINUOUS_MATHEMATICS_REVIEW_01_RESOLUTION.md`: Main Research remediation log, not independent closure.
+Review: `reviews/INDEPENDENT_CONTINUOUS_MATHEMATICS_REREVIEW_01.md`.
+Original review: `reviews/INDEPENDENT_CONTINUOUS_MATHEMATICS_REVIEW_01.md`.
+Original review remains immutable.
 
-## New remediation evidence
-- `docs/06_REVIEW01_CROSSFLOW_CLOSURE_REMEDIATION.md`: explicit local collector geometry/control-volume closure, admissible root proof.
-- `docs/07_CHEMICAL_POTENTIAL_TRANSPORT_SCOPE.md`: thermodynamic driving force and constitutive limitations.
-- `verification/REVIEW01_NUMERICAL_ACCEPTANCE_CONTRACT.md`: numerical tolerances, stopping/reachability, synthetic benchmarks.
-- `docs/CANONICAL_EQUATION_REGISTER.md`: MEM-SOL-001 to MEM-SOL-014 added, still review pending.
+## Findings
+Nine original findings CLOSED; two PARTIALLY RESOLVED (B01 real-module architecture suitability, M03 register completeness at reviewed commit); one input NOTE OPEN (CN4119 specifications). The register has since been expanded with per-equation metadata; this is Main Research's correction, not independently reviewed closure.
 
-## What is established
-Candidate solution-diffusion transport and binary cross-flow balances, analytic limits and dimensionless area scaling. The independent review confirmed the main algebra under assumptions but did not accept the implementation handoff.
+## Allowed next action
+Prototype numerical implementation of the **idealized binary local-collector cross-flow model** under fixed positive permeances, fixed pressures, ideal gas, and other explicit assumptions. Implement the numerical acceptance contract and execute TEST-A through TEST-F. This is NOT physical validation or approval for CN4119 predictions.
 
-## Still open
-- Independent reviewer acceptance of remediation and corrected contract.
-- Execution of numerical benchmark tests during implementation.
-- Actual CN4119 gas conditions, membrane class/property dataset, realistic module architecture and economic basis.
+## Mathematical evidence
+- docs/01 through docs/07
+- docs/CANONICAL_EQUATION_REGISTER.md
+- docs/DERIVATION_LEDGER.md
+- verification/REVIEW01_NUMERICAL_ACCEPTANCE_CONTRACT.md
 
-## Next bounded action
-Ask the independent reviewer to assess docs/06, docs/07, the numerical acceptance contract, synchronized derivation ledger and equation register, and the Review 01 resolution; do not modify the original review.
+## Remaining dependencies
+1. Confirm actual membrane-module geometry/flow arrangement; otherwise the idealized collector closure may be inappropriate.
+2. Independently check the completed equation-register metadata if seeking formal finding closure.
+3. Execute numerical benchmarks and retain actual residuals/convergence.
+4. Obtain actual CN4119 flue-gas inputs and source-matched membrane properties.
+5. Integrate DWSIM/HYSYS only after the prototype is numerically verified.
+6. Evaluate membrane area, energy and economics under a consistent no-membrane baseline.
 
 ## STOP
-Do not label the mathematics independently verified or start final MATLAB/DWSIM implementation until the independent mathematical gate is accepted.
+Do not label prototype results as validated physical membrane predictions. Do not assume numerical tests passed before execution.
