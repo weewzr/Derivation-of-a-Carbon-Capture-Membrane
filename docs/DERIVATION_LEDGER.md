@@ -25,3 +25,10 @@ For each consequential equation state physical purpose, starting principle, alge
 
 ## Source-of-truth precedence
 The consolidated correction contract (docs/06 and docs/07 plus verification/REVIEW01_NUMERICAL_ACCEPTANCE_CONTRACT.md) takes precedence over superseded proof/solver wording in docs/01-05 until those documents are revised. This does not mean independent acceptance.
+
+
+| DER-016 | Global dimensionless flow properties, monotonic output metrics, exact $r=0$ parametric family, exact $\alpha=1$ family, constant-driving-force reference | docs/08_GLOBAL_MODEL_PROPERTIES_AND_ANALYTICAL_COMPLETION.md; canonical register MEM-ANA-001 to MEM-ANA-005 | Fixed $P_f>P_p\ge0$, constant positive permeances, ideal binary gas, ideal local collectors | DERIVED SYMBOLICALLY FOR RESTRICTED MODEL | Numerical TEST-A to TEST-F not executed; commercial-module applicability unresolved |
+
+## Mathematics phase boundary
+
+The generic continuous mathematical specification is complete for the restricted ideal local-collector model through documents 01-08. This means the governing equations, admissible algebraic closure, boundary/initial data, dimensional scaling, output identities, symbolic limiting solutions, and numerical acceptance rules have been specified. It does **not** mean the numerical implementation has passed its tests or that the intended real module satisfies the selected architecture. Do not add project-specific claims until those separate gates are satisfied.
