@@ -45,3 +45,16 @@ This is the single authoritative equation ID register for the membrane derivatio
 | MEM-SOL-014 | Physical area conversion | docs/04/05 | dimensional identity | Pi_C>0; P_f>0; F0>0 | m2 | unit check and scaling; re-review 01 | Independently checked symbolically for restricted model; numerical execution pending | sizing |
 
 This register reflects independent re-review 01's **restricted** mathematical acceptance only. It does not claim executed MATLAB/DWSIM verification, empirical validation, or suitability of a commercial module. Original review reports remain immutable.
+
+
+## MEM-ANA register (document 08 mathematical completion)
+
+| ID | Description | Source | Class | Assumptions/domain | Units | Check evidence | Status | Dependencies / use |
+|---|---|---|---|---|---|---|---|---|
+| MEM-ANA-001 | Identity $q_C+q_N=1-r$ | docs/08 | ALGEBRAIC IDENTITY | Ideal binary local-collector model; $0\le r<1$ | 1 | Direct substitution | Symbolically derived; numerical execution not required for identity | Total-flow bounds |
+| MEM-ANA-002 | Monotonic stage cut and component recoveries | docs/08 | DERIVED | Admissible branch; $0<x<1$, $z\in(0,1)$, $\alpha>0$, $r<1$ | 1 per dimensionless area | Differentiate definitions and ODEs | Symbolically derived; numerical behavior not executed | Target design search |
+| MEM-ANA-003 | Exact parametric solution at $r=0$ | docs/08 | ANALYTICAL LIMIT | $z\in(0,1)$, $\alpha>0$, $u\in(0,1]$ | Dimensionless | Integrate component-ODE ratio and area relation | Symbolically derived; numerical benchmark pending | Verification TEST-B |
+| MEM-ANA-004 | Exact solution at $\alpha=1$ | docs/08 | ANALYTICAL LIMIT | $0\le r<1$, $0\le a<1/(1-r)$ | Dimensionless | Closure $y=x$; integrate total-flow ODE | Symbolically derived; numerical benchmark pending | Verification TEST-A/TEST-D |
+| MEM-ANA-005 | Constant-driving-force single-component reference | docs/08 and verification contract | ANALYTICAL REFERENCE | Constant $\Pi$, constant $\Delta p>0$ | $F$ in mol/s, $A$ in m$^2$ | Integrate $dF/dA=-\Pi\Delta p$ | Symbolically derived; numerical execution pending | Sign and dimensional test |
+
+These analytical entries complete the generic symbolic reference set for the restricted model. They do not imply that TEST-A through TEST-F have been executed or that the intended commercial module has been confirmed.
